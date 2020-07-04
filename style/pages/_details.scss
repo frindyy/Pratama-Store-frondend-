@@ -1,0 +1,57 @@
+.page-details {
+  .store-gallery {
+    margin-top: 15px;
+
+    .thumbnail-image {
+      margin-bottom: 15px;
+      border: 2px solid transparent;
+      max-width: 150px;
+
+      &:hover,
+      &.active {
+        border: 2px solid #29a867;
+      }
+    }
+
+    .spesifikasi-produk {
+      th {
+        font-weight: 300;
+        font-size: 14px;
+      }
+
+      td {
+        font-weight: 300;
+        font-size: 14px;
+        color: #b1b1b1;
+      }
+    }
+  }
+  .description-product {
+    height: 350px;
+
+    a {
+      color: #29a867;
+      font-weight: 500;
+    }
+
+    .tab-content {
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-top: 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .tab-content p {
+      font-size: 16px;
+      color: #868686;
+      line-height: 28px;
+      font-weight: 200;
+    }
+
+    .product-review {
+      height: 330px;
+      overflow: scroll;
+      padding: 20px;
+    }
+  }
+}

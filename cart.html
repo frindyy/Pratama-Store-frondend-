@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Pratama-Store</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
+      data-aos="fade-down"
+    >
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/logo.svg" alt="Logo" />
+          <strong>Pratama Store</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link custom" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom" href="rewards.html">Rewards</a>
+            </li>
+          </ul>
+
+          <!-- Dekstop Menu -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item dropdown">
+              <a
+                href=""
+                class="nav-link"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+              >
+                <img
+                  src="images/icon-user.png"
+                  alt=""
+                  class="rounded-circle mr-2 profile-picture"
+                />
+                Hi, Frindy
+              </a>
+              <div class="dropdown-menu">
+                <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                <a href="dashboard-account.html" class="dropdown-item"
+                  >Settings</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="/" class="dropdown-item">Logout</a>
+              </div>
+            </li>
+            <!-- Cart Icon -->
+            <li class="nav-item">
+              <a href="" class="nav-link d-inline-block mt-2">
+                <img src="images/icon-cart-filled.svg" alt="" />
+                <div class="card-badge">3</div>
+              </a>
+            </li>
+            <!-- Cart Icon -->
+          </ul>
+          <!-- Dekstop Menu -->
+
+          <!-- Mobile Menu -->
+          <ul class="navbar-nav d-block d-lg-none">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <img
+                  src="images/icon-user.png"
+                  alt=""
+                  class="rounded-circle mr-2 profile-picture"
+                />
+                Hi, Frindy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link d-inline-block">
+                Cart
+              </a>
+            </li>
+          </ul>
+          <!-- Mobile Menu -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content page-cart">
+      <!-- Section Breadcrumbs -->
+      <section
+        class="store-breadcrumbs px-5"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Cart
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Breadcrumbs -->
+
+      <!-- Store Cart -->
+      <section class="store-cart px-5">
+        <div class="container-fluid">
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-8 table-responsive">
+              <table class="table table-hover table-cart">
+                <thead>
+                  <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name &amp; Seller</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Menu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="width: 25%;">
+                      <img
+                        src="images/product-cart-1.jpg"
+                        alt=""
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 25%;">
+                      <div class="product-title">Sofa Ternyaman</div>
+                      <div class="product-subtitle">riski adi</div>
+                    </td>
+                    <td style="width: 25%;">
+                      <div class="product-price">Rp.30.000</div>
+                    </td>
+                    <td style="width: 25%;">
+                      <a href="" class="btn btn-remove-cart">Remove</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 25%;">
+                      <img
+                        src="images/product-cart-2.jpg"
+                        alt=""
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 35%;">
+                      <div class="product-title">Sneaker</div>
+                      <div class="product-subtitle">Angga Riski</div>
+                    </td>
+                    <td style="width: 35%;">
+                      <div class="product-price">Rp.90.000</div>
+                    </td>
+                    <td>
+                      <a href="" class="btn btn-remove-cart">Remove</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 25%;">
+                      <img
+                        src="images/product-cart-3.jpg"
+                        alt=""
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 35%;">
+                      <div class="product-title">Coffe Holder</div>
+                      <div class="product-subtitle">Additec</div>
+                    </td>
+                    <td style="width: 35%;">
+                      <div class="product-price">Rp.100.000</div>
+                    </td>
+                    <td>
+                      <a href="" class="btn btn-remove-cart">Remove</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-12">
+              <hr />
+            </div>
+            <div class="col-12">
+              <h2 class="mb-4">Shipping Details</h2>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="addressOne">Address 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addressOne"
+                  placeholder="Address 1"
+                />
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="addressTwo">Address 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addressTwo"
+                  placeholder="Address 2"
+                />
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="kode_pos">Kode Pos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kode_pos"
+                  placeholder="Kode Pos"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="provinsi">Provinsi</label>
+                <select name="provinsi" id="provinsi" class="form-control">
+                  <option value="">--Provinsi--</option>
+                  <option value="">Jawa Timur</option>
+                  <option value="">Jawa Barat</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="kota">Kota</label>
+                <select name="kota" id="kota" class="form-control">
+                  <option value="">--Kota--</option>
+                  <option value="">Surabaya</option>
+                  <option value="">Bandung</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="negara">Negara</label>
+                <input type="text" name="negara" id="negara" placeholder="Negara" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-12">
+            <hr />
+          </div>
+          <div class="col-12">
+            <h2 class="mb-2">Payment Informations</h2>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-4 col-md-2">
+            <div class="product-title">$10</div>
+            <div class="product-subtitle">Country Tax</div>
+          </div>
+          <div class="col-4 col-md-3">
+            <div class="product-title">$280</div>
+            <div class="product-subtitle">Product Insurance</div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="product-title">$580</div>
+            <div class="product-subtitle">Ship to Jakarta</div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="product-title text-success">$392,409</div>
+            <div class="product-subtitle">Total</div>
+          </div>
+          <div class="col-8 col-md-3">
+            <a href="success.html" class="btn btn-success mt-4 btn-block">Checkout Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Store Cart -->
+    </div>
+    <!-- End Page Content -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pt-4 pb-2">
+              2020 Copyright Pratama Store. All Right Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  </body>
+</html>

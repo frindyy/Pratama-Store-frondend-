@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Pratama-Store</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
+      data-aos="fade-down"
+    >
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/logo.svg" alt="Logo" />
+          <strong>Pratama Store</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link custom" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom" href="rewards.html">Rewards</a>
+            </li>
+          </ul>
+
+          <!-- Dekstop Menu -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item dropdown">
+              <a
+                href=""
+                class="nav-link"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+              >
+                <img
+                  src="images/icon-user.png"
+                  alt=""
+                  class="rounded-circle mr-2 profile-picture"
+                />
+                Hi, Frindy
+              </a>
+              <div class="dropdown-menu">
+                <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                <a href="dashboard-account.html" class="dropdown-item"
+                  >Settings</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="/" class="dropdown-item">Logout</a>
+              </div>
+            </li>
+            <!-- Cart Icon -->
+            <li class="nav-item">
+              <a href="" class="nav-link d-inline-block mt-2">
+                <img src="images/icon-cart-empty.svg" alt="" />
+              </a>
+            </li>
+            <!-- Cart Icon -->
+          </ul>
+          <!-- Dekstop Menu -->
+
+          <!-- Mobile Menu -->
+          <ul class="navbar-nav d-block d-lg-none">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <img
+                  src="images/icon-user.png"
+                  alt=""
+                  class="rounded-circle mr-2 profile-picture"
+                />
+                Hi, Frindy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link d-inline-block">
+                Cart
+              </a>
+            </li>
+          </ul>
+          <!-- Mobile Menu -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content page-details">
+      <!-- Section Breadcrumbs -->
+      <section
+        class="store-breadcrumbs px-5"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Product Details
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Breadcrumbs -->
+
+      <!-- Section Gallery -->
+      <section class="store-gallery px-5" id="gallery">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-5" data-aos="zoom-in">
+              <div class="xzoom-container mb-2">
+                <transition name="slide-fade" mode="out-in">
+                  <img
+                    :src="photos[activePhoto].url"
+                    :key="photos[activePhoto].id"
+                    alt=""
+                    class="w-100 main-image"
+                  />
+                </transition>
+              </div>
+              <div
+                class="xzoom-thumbs d-flex justify-content-center"
+                style="text-align: center;"
+              >
+                <div
+                  v-for="(photo,index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="" @click.prevent="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      alt=""
+                      class="thumbnail-image img-thumbnail w-100"
+                      :class="{active: index == activePhoto}"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--Col-lg-5 -->
+            <!-- <div class="col-xl-1">
+              <div class="row">
+                <div
+                  class="col-3 col-xl-12 mt-1 mt-lg-0 px-0"
+                  v-for="(photo,index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="" @click.prevent="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      alt=""
+                      class="thumbnail-image img-thumbnail w-100"
+                      :class="{active: index == activePhoto}"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div> -->
+            <!--Col-lg-2 -->
+            <div class="col-xl-5" data-aos="zoom-in" data-aos-delay="200">
+              <div class="info-price">
+                <div class="card" style="width: 100%;">
+                  <div class="card-body">
+                    <h4 class="card-title" style="color: #29a867;">
+                      <strong>Rp.55.000.000</strong>
+                    </h4>
+                    <p class="card-subtitle mb-2 text-muted">
+                      Kursi Ternyaman - IKEA
+                    </p>
+                    <hr />
+                    <h6>Spesifikasi Produk</h6>
+                    <table class="spesifikasi-produk w-100">
+                      <tr>
+                        <th>Kategori</th>
+                        <td class="text-right">
+                          Furniture > Kursi
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Merk</th>
+                        <td class="text-right">IKEA</td>
+                      </tr>
+                      <tr>
+                        <th>Stok</th>
+                        <td class="text-right">5</td>
+                      </tr>
+                      <tr>
+                        <th>Dikirim Dari</th>
+                        <td class="text-right">
+                          KOTA JAKARTA PUSAT - GAMBIR, DKI JAKARTA
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="kuantitas mt-4" id="quantity">
+                <div class="row">
+                  <div class="col-8 d-flex">
+                    <button
+                      type="button"
+                      style="border: 2px solid #eaeaea; color: #000;"
+                      @click="decrement()"
+                      :disabled="quantity == 1"
+                    >
+                      <i class="fas fa-minus-circle fa-1x"></i></button
+                    ><input
+                      type="number"
+                      v-model="quantity"
+                      class="form-control w-25 text-center"
+                      :min="quantity"
+                      max="10"
+                      inputmode="numeric"
+                      style="
+                        width: 10px;
+                        height: 3rem;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        border-color: #eaeaea;
+                        border-radius: 0;
+                      "
+                    />
+                    <button
+                      type="button"
+                      style="border: 2px solid #eaeaea; color: #000;"
+                      @click="increment()"
+                    >
+                      <i class="fas fa-plus-circle fa-1x"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mt-3">
+                    <div class="mb-3 align-self-center">Tersisa 5 Stok</div>
+                    <a href="cart.html" class="btn btn-success btn-sm px-3"
+                      >Beli Sekarang</a
+                    >
+                    <a href="" class="btn btn-outline-success btn-sm px-3"
+                      >Masukan Keranjang</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Gallery -->
+
+      <!-- Section Profile Toko -->
+      <section class="profile-toko px-5 mt-5" id="profile-toko">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-9">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3 col-lg-1 d-none d-sm-block">
+                      <img
+                        src="images/icon-user.png"
+                        alt=""
+                        style="width: 100px;"
+                      />
+                    </div>
+                    <div class="col-8 col-lg-6 pl-5">
+                      <h4>Adi Store Hijab</h4>
+                      <p>14.2K <span>Followes</span></p>
+                      <a href="" class="btn btn-success btn-sm px-2"
+                        >Kunjungi Toko</a
+                      >
+                      <a href="" class="btn btn-outline-success btn-sm px-2"
+                        >Chat</a
+                      >
+                    </div>
+                    <div class="col-1 col-lg-5" style="text-align: right;">
+                      <a href="#"
+                        ><i
+                          class="fas fa-heart fa-1x"
+                          title="Wishlist"
+                          style="color: red;"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Profile Toko -->
+      <section class="description-product px-5 mt-5" id="description-product">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-9" data-aos="fade-up" data-aos-delay="400">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="description-tab"
+                    data-toggle="tab"
+                    href="#description"
+                    role="tab"
+                    aria-controls="description"
+                    aria-selected="true"
+                    >Product Description</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="review-tab"
+                    data-toggle="tab"
+                    href="#review"
+                    role="tab"
+                    aria-controls="review"
+                    aria-selected="false"
+                    >Review</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content p-3" id="myTabContent">
+                <div
+                  class="tab-pane fade show active product-review"
+                  id="description"
+                  role="tabpanel"
+                  aria-labelledby="description-tab"
+                >
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, illum, animi sequi ut facere corporis quos
+                    temporibus magnam a voluptatem cum. Earum officia eos eaque
+                    deleniti, culpa corrupti iure amet reprehenderit. Eum
+                    tenetur veniam mollitia pariatur esse voluptatum quaerat,
+                    saepe nesciunt. Dolore
+                  </p>
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, illum, animi sequi ut facere corporis quos
+                    temporibus magnam a voluptatem cum. Earum officia eos eaque
+                    deleniti, culpa corrupti iure amet reprehenderit. Eum
+                    tenetur veniam mollitia pariatur esse voluptatum quaerat,
+                    saepe nesciunt. Dolore
+                  </p>
+                </div>
+                <div
+                  class="tab-pane fade product-review"
+                  id="review"
+                  role="tabpanel"
+                  aria-labelledby="review-tab"
+                >
+                  <div class="row">
+                    <div class="col-2 col-lg-1 align-self-center">
+                      <img
+                        src="images/icon-user.png"
+                        alt=""
+                        style="width: 60px;"
+                      />
+                    </div>
+                    <div class="col">
+                      <h5>Frindy Pratama</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Deleniti, animi?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 col-lg-1 align-self-center">
+                      <img
+                        src="images/icon-user.png"
+                        alt=""
+                        style="width: 60px;"
+                      />
+                    </div>
+                    <div class="col">
+                      <h5>Frindy Pratama</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Deleniti, animi?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 col-lg-1 align-self-center">
+                      <img
+                        src="images/icon-user.png"
+                        alt=""
+                        style="width: 60px;"
+                      />
+                    </div>
+                    <div class="col">
+                      <h5>Frindy Pratama</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Deleniti, animi?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 col-lg-1 align-self-center">
+                      <img
+                        src="images/icon-user.png"
+                        alt=""
+                        style="width: 60px;"
+                      />
+                    </div>
+                    <div class="col">
+                      <h5>Frindy Pratama</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Deleniti, animi?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 col-lg-1 align-self-center">
+                      <img
+                        src="images/icon-user.png"
+                        alt=""
+                        style="width: 60px;"
+                      />
+                    </div>
+                    <div class="col">
+                      <h5>Frindy Pratama</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Deleniti, animi?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Page Content -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pt-4 pb-2">
+              2020 Copyright Pratama Store. All Right Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#gallery",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          activePhoto: 0,
+          quantity: 1,
+          photos: [
+            {
+              id: 1,
+              url: "images/product-details-1.jpg",
+            },
+            {
+              id: 2,
+              url: "images/product-details-2.jpg",
+            },
+            {
+              id: 3,
+              url: "images/product-details-3.jpg",
+            },
+            {
+              id: 4,
+              url: "images/product-details-4.jpg",
+            },
+          ],
+        },
+        methods: {
+          changeActive(id) {
+            this.activePhoto = id;
+          },
+          increment() {
+            this.quantity++;
+          },
+          decrement() {
+            if (this.quantity === 1) {
+              alert("Negative quantity not allowed");
+            } else {
+              this.quantity--;
+            }
+          },
+        },
+      });
+    </script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  </body>
+</html>
