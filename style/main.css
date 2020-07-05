@@ -11283,6 +11283,9 @@ footer p {
 }
 
 .component-categories {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px 15px 10px 15px;
   margin-top: 10px;
   margin-bottom: 20px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -11297,7 +11300,7 @@ footer p {
 
 .component-categories .categories-text {
   color: #0c0d36;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   font-weight: normal;
   margin-top: 12px;

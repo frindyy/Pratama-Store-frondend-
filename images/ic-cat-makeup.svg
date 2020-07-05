@@ -1,0 +1,21 @@
+<svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="38" cy="38" r="38" fill="#E4E4E4"/>
+<path d="M21 36.3028C21 35.3134 22.2832 34.9248 22.832 35.7481L24.8321 38.7481C24.9416 38.9123 25 39.1054 25 39.3028V43H21V36.3028Z" fill="#F32355"/>
+<rect x="20" y="42" width="6" height="6" rx="1" fill="#61DB99"/>
+<rect x="18" y="45" width="10" height="14" rx="2" fill="#009E74"/>
+<path d="M46.1006 36.0959C46.0458 34.955 46.9561 34 48.0983 34H51.9017C53.0439 34 53.9542 34.955 53.8994 36.0959L52.8914 57.0959C52.8402 58.162 51.961 59 50.8937 59H49.1063C48.039 59 47.1598 58.162 47.1086 57.0959L46.1006 36.0959Z" fill="#009E74"/>
+<path d="M25 51.5C25 51.2239 25.2239 51 25.5 51C25.7761 51 26 51.2239 26 51.5V59H25V51.5Z" fill="#A7F3CE"/>
+<rect x="35" y="16" width="2" height="22" rx="1" fill="#009E74"/>
+<rect x="32" y="18" width="2" height="8" rx="1" transform="rotate(-90 32 18)" fill="#009E74"/>
+<rect x="32" y="22" width="2" height="8" rx="1" transform="rotate(-90 32 22)" fill="#009E74"/>
+<rect x="32" y="26" width="2" height="8" rx="1" transform="rotate(-90 32 26)" fill="#009E74"/>
+<rect x="32" y="30" width="2" height="8" rx="1" transform="rotate(-90 32 30)" fill="#009E74"/>
+<rect x="32" y="34" width="2" height="8" rx="1" transform="rotate(-90 32 34)" fill="#009E74"/>
+<path d="M32.2102 37H40.2102C40.2102 37 40.5929 43.7213 40.2102 48C39.8213 52.3488 38.2102 59 38.2102 59H34.7102C34.7102 59 32.6952 52.3785 32.2102 48C31.7372 43.7303 32.2102 37 32.2102 37Z" fill="#61DB99"/>
+<rect x="33" y="39" width="5" height="1" fill="#009E74"/>
+<ellipse cx="50" cy="30.5" rx="7" ry="8.5" fill="#61DB99"/>
+<path d="M48 40L47 33" stroke="#009E74" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.9712 41.0367L50.6674 34" stroke="#009E74" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52 40L53 33" stroke="#009E74" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M53.08 54L52.9314 57.0959C52.8802 58.162 52.001 59 50.9337 59H49.1463C48.079 59 47.1998 58.162 47.1486 57.0959L47 54H53.08Z" fill="#61DB99"/>
+</svg>
