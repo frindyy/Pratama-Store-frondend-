@@ -11,4 +11,29 @@
   .store-new-products {
     margin-top: 30px;
   }
+
+  .store-new-shop {
+    margin-top: 30px;
+
+    .shop-title h5 {
+      color: #29a867;
+      font-weight: 500;
+      font-size: 16px;
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+      }
+    }
+    .shop-subtitle {
+      font-weight: 200;
+      font-size: 16px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .shop-button {
+      margin-top: 10px;
+    }
+  }
 }
