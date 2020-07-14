@@ -11440,9 +11440,15 @@ footer p {
 
 .component-products .products-title {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 12px;
   color: #0c0d36;
   margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .component-products .products-title {
+    font-size: 16px;
+  }
 }
 
 .component-products .products-price {
