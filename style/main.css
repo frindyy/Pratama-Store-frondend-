@@ -11197,6 +11197,10 @@ footer p {
   color: #0c0d36;
 }
 
+.page-auth .section-store-auth a {
+  text-decoration: none;
+}
+
 .page-auth .section-store-auth .form-control {
   border-radius: 8px;
 }

@@ -9,6 +9,13 @@
       font-size: 28px;
       margin-top: 0;
       color: #0c0d36;
+      // @include media-breakpoint-up(md) {
+      //   font-size: 28px;
+      // }
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .form-control {
